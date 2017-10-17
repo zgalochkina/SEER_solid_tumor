@@ -266,6 +266,9 @@ loaded via a namespace (and not attached):
 
 2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties.
 
+
+### P.S.
+
 Great books:
 
 1. R in Action: Data Analysis and Graphics with R 2nd Edition by Robert Kabacoff;
