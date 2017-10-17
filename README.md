@@ -116,17 +116,17 @@ __2. Download data from SEER Program__
 
 2.1. Request access <https://seer.cancer.gov/data/access.html>;
 
-2.2. Install SEERStat when access is granted;
+2.2. Install SEER\*Stat when access is granted;
 
-2.3. Download all records from SEERStat’s 'Case Listing Session' by following rules:
+2.3. Download all records from SEER\*Stat’s 'Case Listing Session' by following rules:
 
-I. In Selection Tab of SEERStat: 
+I. In Selection Tab of SEER\*Stat: 
 
 a) uncheck all boxes 
 
 b) {Race, Sex, Year Dx, Registry, County.Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'
 
-II. In Table Tab of SEERStat pre-select columns to speed up download of the data 
+II. In Table Tab of SEER\*Stat pre-select columns to speed up download of the data 
 
 Columns: "Age recode with <1 year olds",	
 	"Race recode (White, Black, Other)",	
@@ -262,4 +262,4 @@ loaded via a namespace (and not attached):
 
 ### References
 1. Stat software citation: Surveillance Research Program, National Cancer Institute SEER\*Stat software (seer.cancer.gov/seerstat) version 8.3.4.
-2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties. https://seer.cancer.gov/data/access.html 
+2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties.
