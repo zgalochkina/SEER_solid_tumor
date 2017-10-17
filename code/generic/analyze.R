@@ -20,28 +20,24 @@
 # CREATE SUBFOLDERS -------------------------------------------------------
 # additional subfolders
 
-ifelse(!dir.exists(paths = file.path("./data")), 
-       dir.exists(paths = file.path("./data")), 
-       paste0("Folder already exists"))
-
-ifelse(!dir.exists(paths = file.path("./figures")), 
-       dir.exists(paths = file.path("./figures")), 
-       paste0("Folder already exists"))
-
 ifelse(!dir.exists(paths = file.path("./data/case_listing")), 
-       dir.exists(paths = file.path("./data/case_listing")), 
-       paste0("Folder already exists"))
-
-ifelse(!dir.exists(paths = file.path("./data/intermediate")), 
-       dir.exists(paths = file.path("./data/intermediate")), 
+       dir.create(path = file.path("./data/case_listing")), 
        paste0("Folder already exists"))
 
 ifelse(!dir.exists(paths = file.path(paste0("./data/case_listing/", cancer_type))), 
        dir.create(path  = file.path(paste0("./data/case_listing/", cancer_type))), 
        paste0("Folder already exists"))
 
+ifelse(!dir.exists(paths = file.path("./data/intermediate")), 
+       dir.create(path = file.path("./data/intermediate")), 
+       paste0("Folder already exists"))
+
 ifelse(!dir.exists(paths = file.path(paste0("./data/intermediate/", cancer_type))), 
        dir.create(path  = file.path(paste0("./data/intermediate/", cancer_type))), 
+       paste0("Folder already exists"))
+
+ifelse(!dir.exists(paths = file.path("./figures")), 
+       dir.create(path = file.path("./figures")), 
        paste0("Folder already exists"))
 
 ifelse(!dir.exists(paths = file.path(paste0("./figures/", cancer_type))), 
