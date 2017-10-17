@@ -18,6 +18,7 @@ map_state <- map_state[, which(names(map_state) %in% c("long", "lat", "group"))]
 # LOAD POPDATA ------------------------------------------------------------
 
 # download file
+# url_population <- "https://seer.cancer.gov/popdata/yr1990_2015.19ages/us.1990_2015.19ages.adjusted.txt.gz"
 file <- basename(url_population)
 
 if(! file.exists(gsub(".gz", "", file.path("./data/public", file)))){
