@@ -15,7 +15,7 @@ Create this folders' structure:
 |   |       
 |   \---specific
 |       \---Colorectal
-|               main.R
+|               main.R           - main file, which controls all other files
 |               report_docx_html.Rmd
 |               styles_docx.docx
 |               
