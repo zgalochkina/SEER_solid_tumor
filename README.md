@@ -1,4 +1,4 @@
-# SEER_solid_tumor
+# SEER (solid tumor)
 R code for SEER data analysis of solid tumor in different populations
 
 Folder PATH listing before running code:
