@@ -188,10 +188,10 @@ Running 'main.R' should be enough to generate reports.
 In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
 
 ```
--sequence-  -file-     -lines-
+-sequence-  -file-     -lines-     -comment-
 1.          main.R      1-179
 2.          analyze.R   1-47
-3.          subset.R    All        - the most time concuming part
+3.          subset.R    All        this is the most time consuming part
 4.          analyze.R   55-1002
 5.          map_SEER.R  All
 6.          analyze.R   1008-1016
