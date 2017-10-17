@@ -1,7 +1,7 @@
 # SEER (solid tumor)
-R code for SEER data analysis of solid tumor in different populations
+R code for SEER data analysis of solid tumor in different populations.
 
-Folder PATH listing before running code:
+Folder PATH listing __before__ running code:
 ```
 |   Project_SEER_solid_tumor.Rproj
 |   
@@ -30,5 +30,5 @@ Folder PATH listing before running code:
                 mapcoord.RData
 ```
 
-
+Folder PATH listing __after__ running code:
 
