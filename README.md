@@ -21,8 +21,8 @@ Create this folders' structure:
 |               
 \---data
     +---case_listing
-    |       caselisting_data.dic  - have to be downloaded from SEER*Stat prior running the code
-    |       caselisting_data.txt  - have to be downloaded from SEER*Stat prior running the code
+    |       caselisting_data.dic  - download from SEER*Stat prior running the code and place under this name
+    |       caselisting_data.txt  - download from SEER*Stat prior running the code and place under this name
     |       
     +---intermediate
     \---public
