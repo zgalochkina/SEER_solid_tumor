@@ -116,19 +116,9 @@ __2. Download data from SEER Program__
 <https://seer.cancer.gov/data/access.html>
 * Request access, 
 * Install SEERStat when access is granted,
-* Download all records from SEERStat’s ‘Case Listing’ session by following the following rules:
+* Download all records from SEERStat’s 'Case Listing Session' following rules:
 
-Number of Input Records Read: 9,675,661
-
-    Number        Number
-    Selected      Excluded      Statement
-   ----------    ----------    ------------------------------------------
-                             User Selection (Case)
-    5,000,126     4,675,535     {Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012',
-                                '2013','2014'
-                                
-
-Number of Case Records Used For Analysis: 5,000,126
+{Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'
 
 Column:	Age recode with <1 year olds
 	Race recode (White, Black, Other)
