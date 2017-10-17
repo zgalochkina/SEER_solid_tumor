@@ -183,15 +183,15 @@ IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be 
 
 __3. Run code in 'main.R' file for Colorectal cases__
 
-Running 'main.R' should be enough to generate reports.
+Always open 'Project_SEER_solid_tumor.Rproj' in a new R session first, then run 'main.R'. It should be enough to generate reports automatically.
 
-In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
+In case of any issues here are directions on how to run code line-by-line (see sequence of files and lines):
 
 ```
 -sequence-  -file-     -lines-     -comment-
 1.          main.R      1-179
 2.          analyze.R   1-47
-3.          subset.R    All        this is the most time consuming part
+3.          subset.R    All         this is the most time consuming part
 4.          analyze.R   55-1002
 5.          map_SEER.R  All
 6.          analyze.R   1008-1016
@@ -261,5 +261,13 @@ loaded via a namespace (and not attached):
 ```
 
 ### References
+
 1. Stat software citation: Surveillance Research Program, National Cancer Institute SEER\*Stat software (seer.cancer.gov/seerstat) version 8.3.4.
+
 2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties.
+
+Great books:
+
+1. R in Action: Data Analysis and Graphics with R 2nd Edition by Robert Kabacoff;
+2. http://r4ds.had.co.nz/ R for Data Science by Hadley Wickham and Garrett Grolemund;
+3. Dynamic Documents with R and knitr by Yihui Xie.
