@@ -41,6 +41,8 @@ knitr::kable(flow_chart_us, align = "l")
 knitr::kable(flow_chart_reg, align = "l")
 ```
 
+where 'x' means that we did not use these criteria, 'o' - applied these criteria. 
+
 
 ***
 ######
