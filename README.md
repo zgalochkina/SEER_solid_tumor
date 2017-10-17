@@ -3,7 +3,7 @@ R code for SEER data analysis of solid tumor in different populations.
 
 Create this folders' structure:
 ```
-|   Project_SEER_solid_tumor.Rproj
+|   Project_SEER_solid_tumor.Rproj  - always start a new R session by opening this file first
 |   
 +---code
 |   +---generic
@@ -15,14 +15,14 @@ Create this folders' structure:
 |   |       
 |   \---specific
 |       \---Colorectal
-|               main.R           - main file, which controls all other files
+|               main.R              - main file, which controls all other files
 |               report_docx_html.Rmd
 |               styles_docx.docx
 |               
 \---data
     +---case_listing
-    |       caselisting_data.dic  - download from SEER*Stat prior running the code and place under this name
-    |       caselisting_data.txt  - download from SEER*Stat prior running the code and place under this name
+    |       caselisting_data.dic    - download from SEER*Stat prior running the code and place under this name
+    |       caselisting_data.txt    - download from SEER*Stat prior running the code and place under this name
     |       
     +---intermediate
     \---public
