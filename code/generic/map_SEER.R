@@ -17,8 +17,17 @@ map_state <- map_state[, which(names(map_state) %in% c("long", "lat", "group"))]
 
 # LOAD POPDATA ------------------------------------------------------------
 
+# download file
+file <- basename(url_population)
+
+if(! file.exists(gsub(".gz", "", file.path("./data/public", file)))){
+  download.file(url_population, file.path("./data/public", file))
+  R.utils::gunzip(file.path("./data/public", file))
+}
+
 # SEER areas Population information 
 # use non-modified original file to use in map
+# "us.1990_2015.19ages.adjusted.txt" file
 pop_map  <-  read_fwf(file = file.path("./data/public/us.1990_2015.19ages.adjusted.txt"), 
                       fwf_widths(c(4, 2, 2, 3, 2, 1, 1, 1, 2, 8),
                                  col_names=c("Year", "State", "StateFIPS", "CountyFIPS", "Registry", "Race", 
