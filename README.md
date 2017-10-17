@@ -174,10 +174,12 @@ Columns: "Age recode with <1 year olds",
 
 III.  Execute session.
 
-IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated).
+IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under name 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
 
+__3. Run code in 'Main.R' file__
+Running 'Main.R' should be enough to generate reports.
+In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
 
-__3. __
 
 
 ### 50 states map
