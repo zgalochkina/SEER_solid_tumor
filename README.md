@@ -179,7 +179,9 @@ IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be 
 __3. Run code in 'Main.R' file for Colorectal cancer typecases__
 
 Running 'Main.R' should be enough to generate reports.
+
 In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
+
 ```
 -sequence-  -file-     -lines-
 1.          main.R      1-179
