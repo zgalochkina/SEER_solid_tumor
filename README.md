@@ -259,3 +259,7 @@ loaded via a namespace (and not attached):
 [41] yaml_2.1.14      parallel_3.4.2   colorspace_1.3-2 rvest_0.3.2     
 [45] bindr_0.1        haven_1.1.0     
 ```
+
+### References
+1. Stat software citation: Surveillance Research Program, National Cancer Institute SEER\*Stat software (seer.cancer.gov/seerstat) version 8.3.4.
+2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties. https://seer.cancer.gov/data/access.html 
