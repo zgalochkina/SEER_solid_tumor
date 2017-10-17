@@ -128,54 +128,56 @@ b) {Race, Sex, Year Dx, Registry, County.Year of diagnosis} = '2004','2005','200
 
 II. In Table Tab of SEER\*Stat pre-select columns to speed up download of the data 
 
-Columns: "Age recode with <1 year olds",	
-	"Race recode (White, Black, Other)",	
-	"Sex",	
-	"Year of diagnosis",	
-	"SEER registry",	
-	"County",	
-	"State-county",	
-	"CHSDA 2012",	
-	"State",	
-	"Site recode ICD-O-3/WHO 2008",	
-	"Behavior recode for analysis",	
-	"Primary Site - labeled",	
-	"Primary Site",	
-	"Histologic Type ICD-O-3",	
-	"Behavior code ICD-O-3",	
-	"Grade",	
-	"Diagnostic Confirmation",	
-	"ICD-O-3 Hist/behav",	
-	"ICD-O-3 Hist/behav, malignant",	
-	"Histology recode - broad groupings",	
-	"Histology recode - Brain groupings",	
-	"Derived AJCC Stage Group, 7th ed (2010+)",	
-	"Derived AJCC Stage Group, 6th ed (2004+)",	
-	"Breast - Adjusted AJCC 6th Stage (1988+)",	
-	"Derived AJCC - Flag (2004+)",		
-	"Summary stage 2000 (1998+)",	
-	"SEER historic stage A",	
-	"COD to site recode",	
-	"SEER cause-specific death classification",",	
-	"SEER other cause of death classification",	
-	"Survival months",	
-	"Survival months flag",	
-	"COD to site rec KM",	
-	"Vital status recode (study cutoff used)",	
-	"Type of follow-up expected",	
-	"Sequence number",	
-	"First malignant primary indicator",	
-	"Age recode with single ages and 85+",	
-	"Race recode (W, B, AI, API)",	
-	"Origin recode NHIA (Hispanic, Non-Hisp)",	
-	"Age at diagnosis",	
-	"Year of birth",	
-	""Month of diagnosis",	
-	"Month of diagnosis recode",	
-	"Patient ID",	
-	"Type of Reporting Source",	
-	"Insurance Recode (2007+)",	
-	"Marital status at diagnosis"	
+```
+Column:	Age recode with <1 year olds
+	Race recode (White, Black, Other)
+	Sex
+	Year of diagnosis
+	SEER registry
+	County
+	State-county
+	CHSDA 2012
+	State
+	Site recode ICD-O-3/WHO 2008
+	Behavior recode for analysis
+	Primary Site - labeled
+	Primary Site
+	Histologic Type ICD-O-3
+	Behavior code ICD-O-3
+	Grade
+	Diagnostic Confirmation
+	ICD-O-3 Hist/behav
+	ICD-O-3 Hist/behav, malignant
+	Histology recode - broad groupings
+	Histology recode - Brain groupings
+	Derived AJCC Stage Group, 7th ed (2010+)
+	Derived AJCC Stage Group, 6th ed (2004+)
+	Breast - Adjusted AJCC 6th Stage (1988+)
+	Derived AJCC - Flag (2004+)
+	Summary stage 2000 (1998+)
+	SEER historic stage A
+	COD to site recode
+	SEER cause-specific death classification
+	SEER other cause of death classification
+	Survival months
+	Survival months flag
+	COD to site rec KM
+	Vital status recode (study cutoff used)
+	Type of follow-up expected
+	Sequence number
+	First malignant primary indicator
+	Age recode with single ages and 85+
+	Race recode (W, B, AI, API)
+	Origin recode NHIA (Hispanic, Non-Hisp)
+	Age at diagnosis
+	Year of birth
+	Month of diagnosis
+	Month of diagnosis recode
+	Patient ID
+	Type of Reporting Source
+	Insurance Recode (2007+)
+	Marital status at diagnosis	
+```
 
 III.  Execute session.
 
