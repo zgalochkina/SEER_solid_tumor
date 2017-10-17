@@ -187,7 +187,7 @@ IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be 
 
 __3. Run code in 'main.R' file for Colorectal cases__
 
-Always open R Project 'Project_SEER_solid_tumor.Rproj' in a new R session first, then run 'main.R'. It should be enough to generate reports automatically.
+__Always open R Project 'Project_SEER_solid_tumor.Rproj' in a new R session first__, then run 'main.R'. It should be enough to generate reports automatically.
 
 Projects allow to use relative path to the files in the code. As no one else will have exactly the same directory configuration as you. [<http://r4ds.had.co.nz/>]
 
