@@ -176,9 +176,9 @@ III.  Execute session.
 
 IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
 
-__3. Run code in 'Main.R' file for Colorectal cancer typecases__
+__3. Run code in 'main.R' file for Colorectal cases__
 
-Running 'Main.R' should be enough to generate reports.
+Running 'main.R' should be enough to generate reports.
 
 In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
 
@@ -195,8 +195,9 @@ In case of any issues here are directions on how to run code line-by-line (with 
 
 __4. Run code with different parameters__
 
-
-
+4.1. Copy folder "Colorectal" from ./code/spacific and rename it according to cancer type selected.
+4.2. In a new folder modify parameters in file 'main.R' and just 1 line in code-chunk called "chamge" in  'report_docx_html.Rmd'.
+4.3. Run 'main.R' file or as described above line-by-line in order to debug.
 
 ### 50 states map
 The map can be reproduced without access to SEER data files.
