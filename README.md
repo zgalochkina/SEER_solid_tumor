@@ -174,11 +174,25 @@ Columns: "Age recode with <1 year olds",
 
 III.  Execute session.
 
-IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under name 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
+IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
 
-__3. Run code in 'Main.R' file__
+__3. Run code in 'Main.R' file for Colorectal cancer typecases__
+
 Running 'Main.R' should be enough to generate reports.
 In case of any issues here are directions on how to run code line-by-line (with all dependencies run separately):
+```
+-sequence-  -file-     -lines-
+1.          main.R      1-179
+2.          analyze.R   1-47
+3.          subset.R    All        - the most time concuming part
+4.          analyze.R   55-1002
+5.          map_SEER.R  All
+6.          analyze.R   1008-1016
+7.          main.R      185-209
+```
+
+__4. Run code with different parameters__
+
 
 
 
