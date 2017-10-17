@@ -204,7 +204,7 @@ __4. Run code with different parameters__
 
 4.1. Copy folder "Colorectal" from ./code/spacific and rename it according to cancer type selected.
 
-4.2. In a new folder modify parameters in file 'main.R' and just 1 line in code-chunk called "chamge" in  'report_docx_html.Rmd'.
+4.2. In a new folder modify parameters in file 'main.R' and just 1 line in code-chunk called "change" in file 'report_docx_html.Rmd'.
 Read inline comments in 'main.R' for more instructions.
 
 4.3. Run 'main.R' file or as described above line-by-line in order to debug.
