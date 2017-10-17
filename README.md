@@ -119,8 +119,12 @@ Some other parameters are also available to be edited, but they are secondary.
 
 ```
 
-#### 50 states map (ggplot)
-![](figures/SEER_covered_areas.png)
+#### 50 states map
+The map can be reproduced without access to SEER data files.
+To do this you will need to download only 3 files: 'map_SEER.R' (from this GitHub repository), 'mapcoord.RData' (from this GitHub repository), and 'us.1990_2015.19ages.adjusted.txt' (see a link shown in comments in 'map_SEER.R'). 
+Don't forget to modify file pathes in 'map_SEER.R'. Here is a map:
+
+![50 states map made by ggplot from GIS shapefiles.](figures/SEER_covered_areas.png)
 
 ### Session Information
 ```
