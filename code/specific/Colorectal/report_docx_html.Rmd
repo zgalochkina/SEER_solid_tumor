@@ -1,0 +1,502 @@
+---
+title: "SEER Report"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: md_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, comment = NA)
+```
+
+```{r change}
+
+# change in this chunk only
+
+cancer_type <- "Colorectal"
+
+```
+
+
+### Cancer type: `r cancer_type`
+
+``` {r load_rworkspace}
+
+wd <- rprojroot::find_rstudio_root_file()
+load(file = paste0(wd, "/data/intermediate/", cancer_type, "/results_of_analyze.RData"))
+
+```
+
+**Note**: Extent of disease progression in cancer patients is described by `r ajcc_grade` system.
+
+
+### Flow charts
+
+##### USA SEER regions other than `r registry`:
+``` {r flow_chart_us, results='asis'}
+knitr::kable(flow_chart_us, align = "l")
+```
+
+##### `r registry` registry:
+``` {r flow_chart_reg, results='asis'}
+knitr::kable(flow_chart_reg, align = "l")
+```
+
+
+***
+######
+### Participants' characteristics
+
+##### USA SEER regions other than `r registry`:
+```{r tbl1_ethn_us, results='asis'}
+knitr::kable(tbl1_ethn_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r tbl1_ethn_reg, results='asis'}
+knitr::kable(tbl1_ethn_reg, align = "l")
+```
+
+
+***
+######
+### Descriptive statistics
+
+#### Gender and Year
+##### USA SEER regions other than `r registry`:
+```{r year_sex_us, results='asis'}
+knitr::kable(year_sex_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r year_sex_reg, results='asis'}
+knitr::kable(year_sex_reg, align = "l")
+```
+
+```{r freq_sex_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/freq_sex_year.png"))
+```
+
+
+#### Race/Ethnicity and Year
+```{r freq_ethn_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/freq_ethn_year.png"))
+```
+
+```{r prop_ethn_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/prop_ethn_year.png"))
+```
+
+
+#### Cancer sites
+```{r distr_sites}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/distr_sites.png"))
+```
+
+######
+#### Cancer sites and Race/Ethnicity
+##### USA SEER regions other than `r registry`:
+```{r site_ethn_us, results='asis'}
+knitr::kable(site_ethn_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r site_ethn_reg, results='asis'}
+knitr::kable(site_ethn_reg, align = "l")
+```
+
+######
+#### Race/Ethnicity and Gender
+##### USA SEER regions other than `r registry`:
+```{r ethn_sex_us, results='asis'}
+knitr::kable(ethn_sex_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r ethn_sex_reg, results='asis'}
+knitr::kable(ethn_sex_reg, align = "l")
+```
+
+######
+#### Summary Stage and Gender
+##### USA SEER regions other than `r registry`:
+```{r sumstage_sex_us, results='asis'}
+knitr::kable(sumstage_sex_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r sumstage_sex_reg, results='asis'}
+knitr::kable(sumstage_sex_reg, align = "l")
+```
+
+######
+#### Stage/Grade and Gender
+##### USA SEER regions other than `r registry`:
+```{r stagegrade_sex_us, results='asis'}
+knitr::kable(stagegrade_sex_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r stagegrade_sex_reg, results='asis'}
+knitr::kable(stagegrade_sex_reg, align = "l")
+```
+
+######
+#### Summary Stage and Race/Ethnicity
+##### USA SEER regions other than `r registry`:
+```{r sumstage_ethn_us, results='asis'}
+knitr::kable(sumstage_ethn_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r sumstage_ethn_reg, results='asis'}
+knitr::kable(sumstage_ethn_reg, align = "l")
+```
+
+######
+#### Stage/Grade and Race/Ethnicity
+##### USA SEER regions other than `r registry`:
+```{r stagegrade_ethn_us, results='asis'}
+knitr::kable(stagegrade_ethn_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r stagegrade_ethn_reg, results='asis'}
+knitr::kable(stagegrade_ethn_reg, align = "l")
+```
+
+
+***
+######
+#### Age by Race/Etnicity
+```{r age_region, results='asis'}
+knitr::kable(age_region, align = "l")
+```
+
+```{r distr_age_ethn}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/distr_age_ethn.png"))
+```
+
+######
+##### USA SEER regions other than `r registry`:
+```{r age_ethn_us, results='asis'}
+knitr::kable(age_ethn_us, align = "l")
+```
+
+anova p-value = `r pval_age_ethn_us` 
+(based on 'Race/Ethnicity' groups without 'Other' level)
+
+##### `r registry` registry:
+```{r age_ethn_reg, results='asis'}
+knitr::kable(age_ethn_reg, align = "l")
+```
+
+anova p-value = `r pval_age_ethn_reg` 
+(based on 'Race/Ethnicity' groups without 'Other' level)
+
+######
+#### Age by Stage or Grade:
+```{r distr_age_stage}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/distr_age_stage.png"))
+```
+
+##### USA SEER regions other than `r registry`:
+```{r age_stagegrade_us, results='asis'}
+knitr::kable(age_stagegrade_us, align = "l")
+```
+
+anova p-value = `r pval_age_stagegrade_us` 
+(based on 'Stage/Grade' without 'Other' and 'Unknown' levels)
+
+##### `r registry` registry:
+```{r age_stagegrade_reg, results='asis'}
+knitr::kable(age_stagegrade_reg, align = "l")
+```
+
+anova p-value = `r pval_age_stagegrade_reg` 
+(based on 'Stage/Grade' without 'Other' and 'Unknown' levels)
+
+***
+######
+### Age-adjusted rates
+
+#### All cases
+##### USA SEER regions other than `r registry`:
+```{r aarate_all_us, results='asis'}
+knitr::kable(aarate_all_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r aarate_all_reg, results='asis'}
+knitr::kable(aarate_all_reg, align = "l")
+```
+
+```{r aarate_all_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/aarate_all_year.png"))
+```
+
+######
+#### by Sex
+##### USA SEER regions other than `r registry`:
+```{r aarate_sex_us, results='asis'}
+knitr::kable(aarate_sex_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r aarate_sex_reg, results='asis'}
+knitr::kable(aarate_sex_reg, align = "l")
+```
+
+```{r aarate_sex_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/aarate_sex_year.png"))
+```
+
+######
+#### by Race/Ethnicity
+##### USA SEER regions other than `r registry`:
+```{r aarate_ethn_us, results='asis'}
+knitr::kable(aarate_ethn_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r aarate_ethn_reg, results='asis'}
+knitr::kable(aarate_ethn_reg, align = "l")
+```
+
+```{r aarate_ethn_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/aarate_ethn_year.png"))
+```
+
+######
+#### by Sites
+##### USA SEER regions other than `r registry`:
+```{r aarate_site_us, results='asis'}
+knitr::kable(aarate_site_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r aarate_site_reg, results='asis'}
+knitr::kable(aarate_site_reg, align = "l")
+```
+
+```{r aarate_site_year}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/aarate_site_year.png"))
+```
+
+
+***
+######
+### Survival analysis
+
+#### Vital status
+##### USA SEER regions other than `r registry`:
+```{r alive_dead_us, results='asis'}
+knitr::kable(alive_dead_us, align = "l")
+```
+
+##### `r registry` registry:
+```{r alive_dead_reg, results='asis'}
+knitr::kable(alive_dead_reg, align = "l")
+```
+
+#### Death reasons in `r registry`:
+```{r death_reason, results='asis'}
+knitr::kable(death_reason, align = "l")
+```
+
+######
+### Kaplan-Meier plots
+
+#### by Region
+```{r KM_registries_CS, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_registries_CS.png"))
+```
+
+```{r KM_registries_cs_tbl, results='asis'}
+knitr::kable(KM_registries_cs_tbl)
+```
+
+```{r KM_registries_NCS, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_registries_NCS.png"))
+```
+
+```{r KM_registries_ncs_tbl, results='asis'}
+knitr::kable(KM_registries_ncs_tbl)
+```
+
+######
+#### by Sex
+
+```{r KM_sex_CS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_sex_CS_us.png"))
+```
+
+```{r KM_sex_NCS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_sex_NCS_us.png"))
+```
+
+```{r KM_sex_tbl_us, results='asis'}
+knitr::kable(KM_sex_tbl_us)
+```
+
+```{r KM_sex_CS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_sex_CS_reg.png"))
+```
+
+```{r KM_sex_NCS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_sex_NCS_reg.png"))
+```
+
+```{r KM_sex_tbl_reg, results='asis'}
+knitr::kable(KM_sex_tbl_reg)
+```
+
+######
+#### by Race/Ethnicity
+
+```{r KM_ethn_CS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_ethn_CS_us.png"))
+```
+
+```{r KM_ethn_NCS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_ethn_NCS_us.png"))
+```
+
+```{r KM_ethn_tbl_us, results='asis'}
+knitr::kable(KM_ethn_tbl_us)
+```
+
+```{r KM_ethn_CS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_ethn_CS_reg.png"))
+```
+
+```{r KM_ethn_NCS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_ethn_NCS_reg.png"))
+```
+
+```{r KM_ethn_tbl_reg, results='asis'}
+knitr::kable(KM_ethn_tbl_reg)
+```
+
+######
+#### by Summary stage
+
+```{r KM_summstage_CS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_summstage_CS_us.png"))
+```
+
+```{r KM_summstage_NCS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_summstage_NCS_us.png"))
+```
+
+```{r KM_summstage_tbl_us, results='asis'}
+knitr::kable(KM_summstage_tbl_us)
+```
+
+```{r KM_summstage_CS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_summstage_CS_reg.png"))
+```
+
+```{r KM_summstage_NCS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_summstage_NCS_reg.png"))
+```
+
+```{r KM_summstage_tbl_reg, results='asis'}
+knitr::kable(KM_summstage_tbl_reg)
+```
+
+######
+#### by Stage/Grade
+
+```{r KM_stagegrade_CS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_stagegrade_CS_us.png"))
+```
+
+```{r KM_stagegrade_NCS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_stagegrade_NCS_us.png"))
+```
+
+```{r KM_stagegrade_tbl_us, results='asis'}
+knitr::kable(KM_stagegrade_tbl_us)
+```
+
+```{r KM_stagegrade_CS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_stagegrade_CS_reg.png"))
+```
+
+```{r KM_stagegrade_NCS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_stagegrade_NCS_reg.png"))
+```
+
+```{r KM_stagegrade_tbl_reg, results='asis'}
+knitr::kable(KM_stagegrade_tbl_reg)
+```
+
+
+######
+#### by Sites
+
+Most frequent sites (but not more than 5 sites).
+
+```{r KM_freqsites_CS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_freqsites_CS_us.png"))
+```
+
+```{r KM_freqsites_NCS_us, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_freqsites_NCS_us.png"))
+```
+
+```{r KM_freqsites_tbl_us, results='asis'}
+knitr::kable(KM_freqsites_tbl_us)
+```
+
+```{r KM_freqsites_CS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_freqsites_CS_reg.png"))
+```
+
+```{r KM_freqsites_NCS_reg, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/", cancer_type, "/KM_freqsites_NCS_reg.png"))
+```
+
+```{r KM_freqsites_tbl_reg, results='asis'}
+knitr::kable(KM_freqsites_tbl_reg)
+```
+
+
+***
+######
+### Cox Proportional Hazards models
+
+```{r COX_cs, results='asis'}
+knitr::kable(COX_cs)
+```
+
+```{r COX_ncs, results='asis'}
+knitr::kable(COX_ncs)
+```
+
+Proportionality assumption is tested in P(PH) column. If P(PH) < 0.05, then proportionallyassumption is violated for that variable.
+
+***
+######
+#### Regions with publicly available cancer data through SEER program:
+```{r SEER_covered_areas, out.width='70%'}
+knitr::include_graphics(paste0(wd, "/figures/SEER_covered_areas.png"))
+```
+
+
+***
+######
+ICD-O-3 codes and histology codes selection for `r cancer_type` cancer type:
+
+``` {r icdo3_recode, results='asis'}
+knitr::kable(icdo3_recode, align = "l")
+```
+
+<http://seer.cancer.gov/siterecode/icdo3_dwhoheme/>
+
+***
+######
+### Session info
+```{r}
+sessionInfo()
+```
