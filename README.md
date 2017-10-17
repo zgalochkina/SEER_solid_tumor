@@ -29,6 +29,12 @@ Some other parameters are also available to be edited, but they are secondary.
 
 
 ### Directions
+
+1. 
+2.
+3.
+
+
 #### Create this folders' structure:
 ```
 |   Project_SEER_solid_tumor.Rproj  - always start a new R session by opening this file first
@@ -112,6 +118,9 @@ Some other parameters are also available to be edited, but they are secondary.
             many PNG files
 
 ```
+
+#### 50 states map (ggplot)
+![](figures/SEER_covered_areas.png)
 
 ### Session Information
 ```
