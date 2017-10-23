@@ -214,8 +214,22 @@ Read inline comments in 'main.R' for more instructions.
 4.3. Run 'main.R' file or as described above line-by-line in order to debug.
 
 ### Notes for SEER data analysis:
-_[soon]_
-for now: read code comments
+
+1.  Note: Use different data subsets for incidence rates and survival analysis;
+
+|    Step    |    Selection Criteria                                                                |    Incidence Rates    |    Survival Analyses    |
+|------------|--------------------------------------------------------------------------------------|-----------------------|-------------------------|
+|    1       |    All cancer diagnoses in SEER registries for selected age   groups, 2004 - 2014    |    o                  |    o                    |
+|    2       |    Colorectal Cancer                                                                 |    o                  |    o                    |
+|    3       |    Malignant                                                                         |    o                  |    o                    |
+|    4       |    Microscopically confirmed                                                         |    x                  |    o                    |
+|    5       |    First primary: 'One primary only' or '1st of 2 or more   primaries'               |    x                  |    o                    |
+|    6       |    Active follow-up                                                                  |    x                  |    o                    |
+
+where 'x' means that we did not use these criteria, 'o' - applied these criteria. 
+
+
+2. Read code comments.
 
 ### 50 states map
 
