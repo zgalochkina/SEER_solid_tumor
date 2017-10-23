@@ -215,7 +215,7 @@ Read inline comments in 'main.R' for more instructions.
 
 ### Notes for SEER data analysis:
 
-1.  Note: Use different data subsets for incidence rates and survival analysis;
+1.  Use different data subsets for incidence rates and survival analyses;
 
 |    Step    |    Selection Criteria                                                                |    Incidence Rates    |    Survival Analyses    |
 |------------|--------------------------------------------------------------------------------------|-----------------------|-------------------------|
