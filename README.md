@@ -215,7 +215,7 @@ Read inline comments in 'main.R' for more instructions.
 
 ### Notes for SEER data analysis:
 _[soon]_
-
+for now: read code comments
 
 ### 50 states map
 
