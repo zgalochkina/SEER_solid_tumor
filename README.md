@@ -213,14 +213,29 @@ Read inline comments in 'main.R' for more instructions.
 
 4.3. Run 'main.R' file or as described above line-by-line in order to debug.
 
+### Notes for SEER data analysis:
+_[soon]_
+
+
 ### 50 states map
 
-The map can be reproduced without access to SEER data files.
+The map can be reproduced without access to SEER data files. There is templare R file and an example file which put SEER covered counties on the map using ggplot. You can actually put any data on the county or state map.
 
 To do this you will need to download only 3 files: 'map_SEER.R' (from this GitHub repository), 'mapcoord.RData' (from this GitHub repository), and 'us.1990_2015.19ages.adjusted.txt' (see a link shown in comments in 'map_SEER.R'). 
-Don't forget to modify file pathes in 'map_SEER.R'. Here is a map:
+Don't forget to modify file pathes in 'map_SEER.R'. Here is a generated map:
 
 ![50 states map made by ggplot from GIS shapefiles.](figures/SEER_covered_areas.png)
+
+__Motivation__: 
+
+1. usually proposed R packages work for 48 states (no Alaska, no Puerto Rico);
+
+2. proposed packages do not show states' names;
+
+3. usually those packages do work for stated, but not county levels data;
+
+4. wanted to make maps from original shape files to lern the process.
+
 
 ### Session Information
 ```
