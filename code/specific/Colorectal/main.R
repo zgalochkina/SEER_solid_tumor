@@ -138,7 +138,7 @@ registry <- "New Mexico"
 # AJCC editions: 6th edition only vs. mix of 6th[for 2004-2009] and 7th[for 2010+] editions
 # if selected "AJCC" option above
 
-ajcc_ed <- "6th and 7th editions"
+ajcc_ed <- "6th edition"
 # select from: 
 # "6th edition", "6th and 7th editions"
 
