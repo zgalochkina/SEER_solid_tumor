@@ -257,6 +257,12 @@ us_dim <- c(us_dim, nrow(us))
 us <- filter(us, Type_of_followup_expected %in% c("Active follow-up"))
 us_dim <- c(us_dim, nrow(us))
 
+# ~~~~~~~~~~~~ 7 ~~~~~~~~~~~~~~~
+# reporting source
+
+us <- filter(us, ! Type_of_Reporting_Source %in% c("Autopsy only", "Death certificate only"))
+us_dim <- c(us_dim, nrow(us))
+
 # save subset for survival analysis
 write_csv(us, path = file.path(paste0("./data/case_listing/", cancer_type), "us_surv.csv"))
 
@@ -321,6 +327,12 @@ reg_dim <- c(reg_dim, nrow(reg))
 reg <- filter(reg, Type_of_followup_expected %in% c("Active follow-up"))
 reg_dim <- c(reg_dim, nrow(reg))
 
+# ~~~~~~~~~~~~ 7 ~~~~~~~~~~~~~~~
+# reporting source
+
+reg <- filter(reg, ! Type_of_Reporting_Source %in% c("Autopsy only", "Death certificate only"))
+reg_dim <- c(reg_dim, nrow(reg))
+
 # save subset for survival analysis
 write_csv(reg, path = file.path(paste0("./data/case_listing/", cancer_type), "reg_surv.csv"))
 
@@ -328,8 +340,8 @@ write_csv(reg, path = file.path(paste0("./data/case_listing/", cancer_type), "re
 # FLOW CHARTS: ------------------------------------------------------------
 
 years_chr <- paste(min(years), "-", max(years))
-select_incidence <- c(rep("o", 3), rep("x", 3))
-select_survival  <- rep("o", 6)
+select_incidence <- c(rep("o", 3), rep("x", 4))
+select_survival  <- rep("o", 7)
 
 
 # for USA -----------------------------------------------------------------
@@ -339,7 +351,8 @@ select_criteria_us <- c(paste("All cancer diagnoses in SEER registries for selec
                         paste("Malignant"),
                         paste("Microscopically confirmed"),
                         paste("First primary: 'One primary only' or '1st of 2 or more primaries'"),
-                        paste("Active follow-up")
+                        paste("Active follow-up"),
+                        paste("Reporting Source NOT 'Autopsy only' and NOT 'Death certificate only'")
 )
 
 flow_chart_us <- data.frame(`Step`               = seq_along(us_dim),
