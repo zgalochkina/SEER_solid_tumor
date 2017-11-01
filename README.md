@@ -1,6 +1,8 @@
 # SEER (solid tumor)
 R code for SEER data analysis of solid tumor in different populations.
 
+### SEER data + R + R Markdown
+
 ### Goal
 Create reproducible report for different cancer types and parameters with minimum modifications on user’s side to observe patterns of different cancer types in populations. 
 
@@ -185,7 +187,9 @@ IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be 
 
 __3. Run code in 'main.R' file for Colorectal cases__
 
-Always open 'Project_SEER_solid_tumor.Rproj' in a new R session first, then run 'main.R'. It should be enough to generate reports automatically.
+__Always open R Project 'Project_SEER_solid_tumor.Rproj' in a new R session first__, then run 'main.R'. It should be enough to generate reports automatically.
+
+Projects allow to use relative path to the files in the code. As no one else will have exactly the same directory configuration as you. [<http://r4ds.had.co.nz/>]
 
 In case of any issues here are directions on how to run code line-by-line (see sequence of files and lines):
 
@@ -202,21 +206,52 @@ In case of any issues here are directions on how to run code line-by-line (see s
 
 __4. Run code with different parameters__
 
-4.1. Copy folder "Colorectal" from ./code/spacific and rename it according to cancer type selected.
+4.1. Copy folder "Colorectal" from ./code/spacific and pate it to the same directory, rename new folder. Name has to be the same as 'cancer_type' variable in 'main.R' file.
 
-4.2. In a new folder modify parameters in file 'main.R' and just 1 line in code-chunk called "chamge" in  'report_docx_html.Rmd'.
+4.2. In a new folder modify parameters in file 'main.R' and just 1 line in code-chunk called "change" in file 'report_docx_html.Rmd'.
 Read inline comments in 'main.R' for more instructions.
 
 4.3. Run 'main.R' file or as described above line-by-line in order to debug.
 
+### Notes for SEER data analysis:
+
+1.  Use different data subsets for incidence rates and survival analyses;
+
+|    Step    |    Selection Criteria                                                                |    Incidence Rates    |    Survival Analyses    |
+|------------|--------------------------------------------------------------------------------------|-----------------------|-------------------------|
+|    1       |    All cancer diagnoses in SEER registries for selected age   groups, 2004 - 2014    |    o                  |    o                    |
+|    2       |    Colorectal Cancer                                                                 |    o                  |    o                    |
+|    3       |    Malignant                                                                         |    o                  |    o                    |
+|    4       |    Microscopically confirmed                                                         |    x                  |    o                    |
+|    5       |    First primary: 'One primary only' or '1st of 2 or more   primaries'               |    x                  |    o                    |
+|    6       |    Active follow-up                                                                  |    x                  |    o                    |
+|    7*      |    Reporting Source NOT 'Autopsy only' and NOT 'Death certificate only'              |    x                  |    o                    |
+
+where 'x' means that we did not use these criteria, 'o' - applied these criteria;
+
+'*' means that step 6 and 7 are usually do the same, but in rare cases might mean different things.
+
+2. Read code comments.
+
 ### 50 states map
 
-The map can be reproduced without access to SEER data files.
+The map can be reproduced without access to SEER data files. There is templare R file and an example file which put SEER covered counties on the map using ggplot. You can actually put any data on the county or state map.
 
 To do this you will need to download only 3 files: 'map_SEER.R' (from this GitHub repository), 'mapcoord.RData' (from this GitHub repository), and 'us.1990_2015.19ages.adjusted.txt' (see a link shown in comments in 'map_SEER.R'). 
-Don't forget to modify file pathes in 'map_SEER.R'. Here is a map:
+Don't forget to modify file pathes in 'map_SEER.R'. Here is a generated map:
 
 ![50 states map made by ggplot from GIS shapefiles.](figures/SEER_covered_areas.png)
+
+__Motivation__: 
+
+1. usually proposed R packages work for 48 states (no Alaska, no Puerto Rico);
+
+2. proposed packages do not show states' names;
+
+3. usually those packages do work for stated, but not county levels data;
+
+4. wanted to make maps from original shape files to lern the process.
+
 
 ### Session Information
 ```
