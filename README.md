@@ -228,7 +228,8 @@ Read inline comments in 'main.R' for more instructions.
 |    7*      |    Reporting Source NOT 'Autopsy only' and NOT 'Death certificate only'              |    x                  |    o                    |
 
 where 'x' means that we did not use these criteria, 'o' - applied these criteria;
-* means that step 6 and 7 are usually do the same, but in rare cases might mean different things.
+
+'*' means that step 6 and 7 are usually do the same, but in rare cases might mean different things.
 
 2. Read code comments.
 
