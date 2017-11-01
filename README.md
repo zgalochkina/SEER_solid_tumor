@@ -13,6 +13,8 @@ The Surveillance, Epidemiology, and End Results (SEER) Program of the National C
 Currently there are 18 SEER registries in the USA.
 
 ### Parameters in the code
+Parameters are useful when you want to re-render the same report with distinct values for various key inputs.
+
 * Years of diagnoses (2004+);
 * Age groups at diagnosis;
 * Cancer type (defined by ICD-O-3 codes together with Histology codes);
