@@ -225,9 +225,10 @@ Read inline comments in 'main.R' for more instructions.
 |    4       |    Microscopically confirmed                                                         |    x                  |    o                    |
 |    5       |    First primary: 'One primary only' or '1st of 2 or more   primaries'               |    x                  |    o                    |
 |    6       |    Active follow-up                                                                  |    x                  |    o                    |
+|    7*      |    Reporting Source NOT 'Autopsy only' and NOT 'Death certificate only'              |    x                  |    o                    |
 
-where 'x' means that we did not use these criteria, 'o' - applied these criteria. 
-
+where 'x' means that we did not use these criteria, 'o' - applied these criteria;
+* means that step 6 and 7 are usually do the same, but in rare cases might mean different things.
 
 2. Read code comments.
 
