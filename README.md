@@ -305,6 +305,11 @@ loaded via a namespace (and not attached):
 
 2. SEER data citation: Database name=Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying) - Linked To County Attributes - Total U.S., 1969-2015 Counties.
 
+3. R Core Team (2017). R: A language and environment for statistical computing. R Foundation for Statistical Computing, Vienna,  Austria. URL <https://www.R-project.org/>.
+
+4. RStudio Team (2016). RStudio: Integrated Development for R. RStudio, Inc., Boston, MA URL <http://www.rstudio.com/>.
+
+
 
 ### P.S.
 
