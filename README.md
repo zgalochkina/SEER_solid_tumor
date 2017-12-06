@@ -126,7 +126,7 @@ __2. Download data from SEER Program__
 
 I. In Data Tab:
 
-Select "SEER\*Stat Database: Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying)" Database Name.
+Select "SEER\*Stat Database: Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying)" Database Name (or the most recent release).
 
 II. In Selection Tab of SEER\*Stat: 
 
