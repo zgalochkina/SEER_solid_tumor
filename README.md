@@ -124,13 +124,17 @@ __2. Download data from SEER Program__
 
 2.3. Download all records from SEER\*Stat’s 'Case Listing Session' by following rules:
 
-I. In Selection Tab of SEER\*Stat: 
+I. In Data Tab:
+
+Select "SEER\*Stat Database: Incidence - SEER 18 Regs Research Data + Hurricane Katrina Impacted Louisiana Cases, Nov 2016 Sub (1973-2014 varying)" Database Name.
+
+II. In Selection Tab of SEER\*Stat: 
 
 a) uncheck all boxes 
 
 b) {Race, Sex, Year Dx, Registry, County.Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'
 
-II. In Table Tab of SEER\*Stat pre-select columns to speed up download of the data 
+III. In Table Tab of SEER\*Stat pre-select columns to speed up download of the data 
 
 ```
 Column:	Age recode with <1 year olds
@@ -183,9 +187,9 @@ Column:	Age recode with <1 year olds
 	Marital status at diagnosis	
 ```
 
-III.  Execute session.
+IV.  Execute session.
 
-IV. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
+V. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
 
 __3. Run code in 'main.R' file for Colorectal cases__
 
