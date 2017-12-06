@@ -1,7 +1,7 @@
 # SEER (solid tumor)
 R code for SEER data analysis of solid tumor in different populations.
 
-### SEER data + R + R Markdown
+### SEER\*Stat + R + R Markdown
 
 ### Goal
 Create reproducible report for different cancer types and parameters with minimum modifications on user’s side to observe patterns of different cancer types in populations. 
