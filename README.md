@@ -189,7 +189,7 @@ Column:	Age recode with <1 year olds
 
 IV.  Execute session.
 
-V. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing.
+V. Matrix -> Export -> Results as Text file -> save (.txt & .dic files fill be generated) under names 'caselisting_data.txt' and 'caselisting_data.dic' in ./data/case_listing/.
 
 __3. Run code in 'main.R' file for Colorectal cases__
 
