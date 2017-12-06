@@ -254,9 +254,9 @@ __Motivation__:
 
 2. proposed packages do not show states' names;
 
-3. usually those packages do work for stated, but not county levels data;
+3. usually those packages do work for states, but not county levels data;
 
-4. wanted to make maps from original shape files to lern the process.
+4. wanted to make maps from original shape files to learn the process.
 
 
 ### Session Information
