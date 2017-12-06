@@ -132,7 +132,9 @@ II. In Selection Tab of SEER\*Stat:
 
 a) uncheck all boxes 
 
-b) {Race, Sex, Year Dx, Registry, County.Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'
+b) {Race, Sex, Year Dx, Registry, County.Year of diagnosis} = '2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014'  (or later years)
+
+Starting from 2004 6th and 7th editions of AJCC staging became available, so this code works for 2004+ cases.
 
 III. In Table Tab of SEER\*Stat pre-select columns to speed up download of the data 
 
