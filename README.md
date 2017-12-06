@@ -1,7 +1,7 @@
 # SEER (solid tumor)
 R code for SEER data analysis of solid tumor in different populations.
 
-### SEER\*Stat + R + R Markdown
+### SEER\*Stat data + R + R Markdown
 
 ### Goal
 Create reproducible report for different cancer types and parameters with minimum modifications on user’s side to observe patterns of different cancer types in populations. 
@@ -122,7 +122,7 @@ __2. Download data from SEER Program__
 
 2.2. Install SEER\*Stat when access is granted;
 
-2.3. Download all records from SEER\*Stat’s 'Case Listing Session' by following rules:
+2.3. Download all records from SEER\*Stat’s **'Case Listing Session'** by following rules:
 
 I. In Data Tab:
 
