@@ -1,3 +1,6 @@
+rm(list = ls())
+while(!is.null(dev.list())) dev.off()
+
 # DOWNLOAD! --------------------------------------------------------------
 
 # https://seer.cancer.gov/data/access.html 
