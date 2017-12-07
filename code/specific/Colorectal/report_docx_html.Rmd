@@ -468,10 +468,12 @@ knitr::kable(KM_freqsites_tbl_reg)
 ######
 ### Cox Proportional Hazards models
 
+##### Cause-Specific
 ```{r COX_cs, results='asis'}
 knitr::kable(COX_cs)
 ```
 
+##### Not Cause-Specific
 ```{r COX_ncs, results='asis'}
 knitr::kable(COX_ncs)
 ```
