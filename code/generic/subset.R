@@ -445,8 +445,8 @@ save(tbl1_ethn_us, tbl1_ethn_reg, tbl1_sex_us, tbl1_sex_reg, tbl1_region,
 # POPULATION DATA ---------------------------------------------------------
 
 # dictionary: https://seer.cancer.gov/popdata/popdic.html 
-# webpage: https://seer.cancer.gov/popdata/download.html - from column "1990-2015 4 Expanded Races by Origin"
-# file: https://seer.cancer.gov/popdata/yr1990_2015.19ages/us.1990_2015.19ages.adjusted.txt.gz
+# webpage: https://seer.cancer.gov/popdata/download.html - from column "1990-2016 4 Expanded Races by Origin"
+# file: https://seer.cancer.gov/popdata/yr1990_2015.19ages/us.1990_2016.19ages.adjusted.txt.gz - changes every year! update link annually!
 
 # download file
 file <- basename(url_population)
@@ -458,7 +458,7 @@ if(! file.exists(gsub(".gz", "", file.path("./data/public", file)))){
 
 # SEER areas Population information 
 # "us.1990_2015.19ages.adjusted.txt" file
-pop <- read_fwf(file = file.path(gsub(".gz", "", file.path("./data/public", file))), 
+pop <- read_fwf(file = file.path("./data/public/", gsub(".gz", "", file)), 
                 fwf_widths(c(4, 2, 2, 3, 2, 1, 1, 1, 2, 8),
                            col_names=c("Year", "State", "StateFIPS", "CountyFIPS", "Registry", "Race", 
                                        "Origin", "Sex", "Age", "Population")))
@@ -576,5 +576,5 @@ save(pop_std, file = file.path(paste0("./data/intermediate/", cancer_type), "pop
 # CLEAN MEMORY ------------------------------------------------------------
 
 rm(list = ls()[!(ls() %in% c('years', 'age_groups', 'cancer_type', 'registry', 'subset_yn', 'race_ethn_yn', 
-                             'map_yn', 'ajcc_grade', 'icdo3_recode'))])
+                             'map_yn', 'ajcc_grade', 'icdo3_recode', 'url_population'))])
 gc()

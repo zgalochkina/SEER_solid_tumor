@@ -159,9 +159,9 @@ subset_yn <- "Yes"
 # ------------ 11 --------------
 # population data (for age-adjusted rates)
 # : https://seer.cancer.gov/popdata/download.html - County-Level Population Files - 19 Age Groups
-# from column "1990-2015 4 Expanded Races by Origin"
+# from column "1990-2016 4 Expanded Races by Origin" - changes every year! update link annually!
 
-url_population <- "https://seer.cancer.gov/popdata/yr1990_2015.19ages/us.1990_2015.19ages.adjusted.txt.gz"
+url_population <- "https://seer.cancer.gov/popdata/yr1990_2016.19ages/us.1990_2016.19ages.adjusted.txt.gz"
 
 # ------------ 12 --------------
 # 2000 standard population (for age-adjusted rates)
